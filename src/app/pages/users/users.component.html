@@ -1,0 +1,32 @@
+<h1>Mi lista de usuarios
+    <p>Angular JS</p>
+</h1>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Nombres</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngIf="loading">
+            <td colspan="3">
+                <i class="fa fa-spinner fa-pulse fa-3x "></i>
+            </td>
+        </tr>
+
+        <tr *ngFor="let item of dataUser; let i=index">
+            <td>
+                {{ item.id }}
+            </td>
+            <td>
+                {{ item.name }}
+            </td>
+            <td>
+                {{ item.email }}
+            </td>
+        </tr>
+    </tbody>
+</table>
